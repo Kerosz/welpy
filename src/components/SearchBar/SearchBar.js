@@ -49,7 +49,7 @@ class SearchBar extends React.Component {
 	}
 
 	renderSortByOptions() {
-		return Object.keys(this.sortByOptions).map((option) => {
+		return Object.keys(this.sortByOptions).map(option => {
 			let sortByOptionValue = this.sortByOptions[option];
 
 			return (
@@ -65,19 +65,19 @@ class SearchBar extends React.Component {
 
 	render() {
 		return (
-			<div className="SearchBar">
-				<div className="SearchBar-sort-options">
+			<div className='SearchBar'>
+				<div className='SearchBar-sort-options'>
 					<ul>{this.renderSortByOptions()}</ul>
 				</div>
-				<div className="SearchBar-fields">
+				<div className='SearchBar-fields'>
 					<input
-						placeholder="Search Businesses"
+						placeholder='Search Businesses'
 						onChange={this.handleTermChange}
 					/>
-					<input placeholder="Where?" onChange={this.handleLocationChange} />
+					<input placeholder='Where?' onChange={this.handleLocationChange} />
 				</div>
-				<div className="SearchBar-submit">
-					<submit className="btn" onClick={this.handleSearch}>
+				<div className='SearchBar-submit'>
+					<submit className='btn' onClick={this.handleSearch}>
 						Let's Go
 					</submit>
 				</div>
