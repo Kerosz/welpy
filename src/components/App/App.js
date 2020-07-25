@@ -18,7 +18,7 @@ class App extends React.Component {
 	}
 
 	searchYelp(term, location, sortBy) {
-		Yelp.search(term, location, sortBy).then((businesses) => {
+		Yelp.search(term, location, sortBy).then(businesses => {
 			this.setState({ businesses: businesses });
 		});
 	}
@@ -27,8 +27,8 @@ class App extends React.Component {
 		const { businesses } = this.state;
 
 		return (
-			<div className="App">
-				<h1>Foody</h1>
+			<div className='App'>
+				<h1 className='Nav'>Foody</h1>
 				<SearchBar search={this.searchYelp} />
 				<BusinessList businesses={businesses} />
 			</div>

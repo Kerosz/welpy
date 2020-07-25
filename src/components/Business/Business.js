@@ -20,7 +20,7 @@ class Business extends React.Component {
 				<div className='image-container'>
 					<img src={imageSrc} alt='' />
 				</div>
-				<h2>{name}</h2>
+				<h2 className='Business__name'>{name}</h2>
 				<div className='Business-information'>
 					<div className='Business-address'>
 						<p>{address}</p>
