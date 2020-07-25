@@ -1,52 +1,74 @@
 .Business {
 	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	width: 16.66rem;
+	width: 25rem;
 	margin: 0 0.5rem 2.3rem 0.5rem;
+	padding: 0.7rem;
+	background: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.07);
+	border-radius: 5px;
+	box-shadow: 2px 2px 15px -2px rgba(0, 0, 0, 0.05);
 }
 
-.Business .image-container {
-	height: 16.66rem;
-	margin-bottom: 1rem;
+.Business:hover {
+	box-shadow: 2px 2px 15px -2px rgba(0, 0, 0, 0.09);
 }
 
-.Business .Business__name {
-	margin-bottom: 0.5rem;
+.Business .image__container img {
+	height: 10.5rem;
+	width: 12rem;
+	border-radius: 4px;
+}
+
+.Business .text__container {
+	margin-left: 1.5rem;
+}
+
+.Business .text__container .Business__name {
+	margin-bottom: 0.2rem;
 	font-size: 1.2rem;
 	font-weight: 600;
 }
 
-.Business-information {
-	display: flex;
-	justify-content: space-between;
-}
-
-.Business-information p {
-	font-size: 0.88rem;
-	font-weight: 300;
+.Business .text__container .rating {
+	font-size: 0.83rem;
 	line-height: 1rem;
+	margin-bottom: 0.5rem;
 }
 
-.Business-address {
+.Business .text__container .Business__information {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
 }
 
-.Business-reviews {
+.Business .text__container .Business__information .Business__address {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
-	text-align: right;
+	margin-bottom: 0.3rem;
 }
 
-.Business-reviews h3 {
-	color: #cca353;
+.Business
+	.text__container
+	.Business__information
+	.Business__address
+	.Address__label {
+	font-size: 0.7rem;
+	font-weight: 400;
+	line-height: 1.02rem;
+	color: #666;
+}
+
+.Business .text__container .Business__information .Business__reviews {
+	display: inline-flexbox;
+	flex-direction: column;
+}
+
+.Business .text__container .Business__information .Business__reviews .category {
+	display: inline-block;
+	color: #fff;
+	background: red;
+	font-size: 0.85rem;
 	font-weight: 600;
-}
-
-.Business-reviews .rating {
-	font-size: 0.88rem;
-	line-height: 1rem;
+	padding: 0.05rem 0.35rem;
+	border-radius: 5px;
+	margin-bottom: 0.2rem;
 }
