@@ -1,5 +1,7 @@
 This project was part of the [CodeCademy React Course](https://www.codecademy.com/learn/paths/build-web-apps-with-react). The project presented in this repo gone through substantial changes in both functionality and/or styles.
 
+![alt text](https://github.com/Kerosz/welpy/blob/master/readme.png)
+
 # Codeacademy React Project : Ravenous as Welpy
 
 - Creating Static Components
