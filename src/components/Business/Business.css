@@ -72,3 +72,17 @@
 	border-radius: 5px;
 	margin-bottom: 0.2rem;
 }
+
+@media only screen and (max-width: 560px) {
+	.Business .image__container img {
+		height: 8rem;
+		width: 9rem;
+	}
+}
+
+@media only screen and (max-width: 420px) {
+	.Business .image__container img {
+		height: 7.5rem;
+		width: 7.5rem;
+	}
+}
