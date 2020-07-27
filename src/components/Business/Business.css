@@ -4,13 +4,13 @@
 	margin: 0 0.5rem 2.3rem 0.5rem;
 	padding: 0.7rem;
 	background: #fff;
-	border: 1px solid rgba(0, 0, 0, 0.08);
+	border: 1px solid rgba(0, 0, 0, 0.1);
 	border-radius: 5px;
-	box-shadow: 2px 2px 15px -2px rgba(0, 0, 0, 0.06);
+	box-shadow: 2px 2px 15px -2px rgba(0, 0, 0, 0.08);
 }
 
 .Business:hover {
-	box-shadow: 2px 2px 15px -2px rgba(0, 0, 0, 0.14);
+	box-shadow: 2px 2px 15px -2px rgba(0, 0, 0, 0.15);
 }
 
 .Business .image__container img {

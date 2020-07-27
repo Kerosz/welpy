@@ -10,10 +10,14 @@ const Yelp = {
 				Authorization: `Bearer ${apiKey}`,
 			},
 		});
+		console.log(response);
+
 		const jsonResponse = await response.json();
+		console.log(jsonResponse);
+
 		try {
 			if (jsonResponse.businesses) {
-				return jsonResponse.businesses.map((business) => ({
+				return jsonResponse.businesses.map(business => ({
 					id: business.id,
 					imageSrc: business.image_url,
 					name: business.name,
@@ -24,6 +28,7 @@ const Yelp = {
 					category: business.categories[0].title,
 					rating: business.rating,
 					reviewCount: business.review_count,
+					url: business.url,
 				}));
 			}
 		} catch (err) {

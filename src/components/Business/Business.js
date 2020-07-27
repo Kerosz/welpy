@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import './Business.css';
 import placeholder from '../../img/placeholder.png';
 
-class Business extends React.Component {
+class Business extends Component {
 	render() {
 		const {
 			imageSrc,
@@ -14,6 +15,7 @@ class Business extends React.Component {
 			zipCode,
 			category,
 			rating,
+			url,
 			// reviewCount,
 		} = this.props.business;
 
@@ -22,7 +24,9 @@ class Business extends React.Component {
 		return (
 			<div className='Business'>
 				<div className='image__container'>
-					<img src={decideWhichImage} alt='Placeholder' />
+					<a href={url} target='_blank' rel='noopener noreferrer'>
+						<img src={decideWhichImage} alt='Placeholder' />
+					</a>
 				</div>
 				<div className='text__container'>
 					<h2 className='Business__name'>{name}</h2>
@@ -37,7 +41,6 @@ class Business extends React.Component {
 						</div>
 						<div className='Business__reviews'>
 							<h4 className='category'>{category}</h4>
-							{/* <p>{reviewCount} reviews</p> */}
 						</div>
 					</div>
 				</div>
@@ -45,5 +48,9 @@ class Business extends React.Component {
 		);
 	}
 }
+
+Business.propTypes = {
+	business: PropTypes.object.isRequired,
+};
 
 export default Business;
