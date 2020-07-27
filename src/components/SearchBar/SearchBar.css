@@ -79,10 +79,13 @@
 }
 
 .Field__btn {
+	outline: none;
+	border: none;
 	border-radius: 0 5px 5px 0;
 	padding: 0.7rem 1.35rem;
 	background-color: #cca353;
 	color: #ffffff;
+	font-size: 1rem;
 	font-weight: 600;
 	transition: background-color 0.5s;
 }

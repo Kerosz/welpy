@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './SearchBar.css';
 
-class SearchBar extends React.Component {
+class SearchBar extends Component {
 	constructor(props) {
 		super(props);
 
@@ -28,7 +29,13 @@ class SearchBar extends React.Component {
 	}
 
 	handleSortByChange(sortByOption) {
-		this.setState({ sortBy: sortByOption });
+		this.setState({ sortBy: sortByOption }, () => {
+			const { term, location, sortBy } = this.state;
+
+			if (term !== '' || location !== '') {
+				this.props.search(term, location, sortBy);
+			}
+		});
 	}
 
 	handleTermChange(e) {
@@ -69,9 +76,9 @@ class SearchBar extends React.Component {
 				<div className='SearchBar__sort'>
 					<ul className='Sort__list'>{this.renderSortByOptions()}</ul>
 				</div>
-				<div className='SearchBar__form'>
+				<form className='SearchBar__form' onSubmit={this.handleSearch}>
 					<div className='SearchBar__fields'>
-						<label className='Field__label' for='food'>
+						<label className='Field__label' htmlFor='food'>
 							Search
 						</label>
 						<input
@@ -82,7 +89,7 @@ class SearchBar extends React.Component {
 						/>
 					</div>
 					<div className='SearchBar__fields'>
-						<label className='Field__label' for='location'>
+						<label className='Field__label' htmlFor='location'>
 							Location
 						</label>
 						<input
@@ -93,19 +100,18 @@ class SearchBar extends React.Component {
 						/>
 					</div>
 					<div className='SearchBar__fields'>
-						<submit className='Field__btn' onClick={this.handleSearch}>
+						<button type='submit' className='Field__btn'>
 							Go
-						</submit>
+						</button>
 					</div>
-				</div>
-				{/* <div className='SearchBar-submit'>
-					<submit className='btn' onClick={this.handleSearch}>
-						Let's Go
-					</submit>
-				</div> */}
+				</form>
 			</div>
 		);
 	}
 }
+
+SearchBar.propTypes = {
+	search: PropTypes.func.isRequired,
+};
 
 export default SearchBar;
